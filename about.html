@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>About - CyberSafe</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    
+    <header>
+
+        <h1>CyberSafe</h1>
+
+        
+            <nav>
+    <a href="index.php">Home</a>
+    <a href="index.php#threats">Cyber Threats</a>
+    <a href="index.php#tips">Safety Tips</a>
+    <a href="index.php#password-checker">Password Checker</a>
+    <a href="phishing-quiz.html">Phishing Quiz</a>
+    <a href="about.html">About</a>
+    <?php if (isset($_SESSION["user_id"])): ?>
+
+    <a href="dashboard.php">
+        👤 <?php echo htmlspecialchars($_SESSION["user_name"]); ?>
+    </a>
+
+    <a href="logout.php">
+        Logout
+    </a>
+
+<?php else: ?>
+
+    <a href="login.php">
+        Login
+    </a>
+
+    <a href="signup.php">
+        Sign Up
+    </a>
+
+<?php endif; ?>
+             </nav>
+
+            
+
+    </header>
+
+
+    
+    <main>
+
+        <section class="content-section">
+
+            <h2>About CyberSafe</h2>
+
+            <p>
+                CyberSafe is a cybersecurity awareness website created
+                to help users understand common cyber threats and learn
+                basic methods of protecting themselves online.
+            </p>
+
+            <p>
+                The website provides simple explanations of cybersecurity
+                topics along with interactive features that allow users
+                to test their knowledge.
+            </p>
+
+        </section>
+
+
+       
+        <section class="content-section">
+
+            <h2>Project Purpose</h2>
+
+            <p>
+                The purpose of this project is to create an educational
+                platform that makes basic cybersecurity concepts easier
+                to understand.
+            </p>
+
+            <p>
+                It also demonstrates how web development and programming
+                can be used to create useful cybersecurity-related tools.
+            </p>
+
+        </section>
+
+
+       
+        <section class="content-section">
+
+            <h2>Project Features</h2>
+
+            <ul>
+
+                <li>Cybersecurity awareness information</li>
+
+                <li>Common cyber threat explanations</li>
+
+                <li>Cyber safety tips</li>
+
+                <li>Password strength checker</li>
+
+                <li>Interactive phishing awareness quiz</li>
+
+                <li>Quiz scoring system</li>
+
+                <li>Responsive website design</li>
+
+            </ul>
+
+        </section>
+
+
+       
+
+        <section class="content-section">
+
+            <h2>Technologies Used</h2>
+
+            <ul>
+
+                <li>HTML - Website structure</li>
+
+                <li>CSS - Website design and layout</li>
+
+                <li>JavaScript - Interactive features</li>
+
+            </ul>
+
+        </section>
+
+
+       
+
+        <section class="content-section">
+
+            <h2>What I Learned</h2>
+
+            <p>
+                Through this project, I practiced HTML structure,
+                CSS styling, JavaScript programming, user interaction,
+                basic cybersecurity concepts and website organization.
+            </p>
+
+        </section>
+
+    </main>
+
+
+    
+    <footer>
+
+        <p>
+            &copy; 2026 CyberSafe. Educational Project.
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>

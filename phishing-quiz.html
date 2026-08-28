@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Phishing Quiz - CyberSafe</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>CyberSafe</h1>
+
+        
+            <nav>
+    <a href="index.php">Home</a>
+    <a href="index.php#threats">Cyber Threats</a>
+    <a href="index.php#tips">Safety Tips</a>
+    <a href="#index.php#password-checker">Password Checker</a>
+    <a href="phishing-quiz.html">Phishing Quiz</a>
+    <a href="about.html">About</a>
+    <?php if (isset($_SESSION["user_id"])): ?>
+
+    <a href="dashboard.php">
+        👤 <?php echo htmlspecialchars($_SESSION["user_name"]); ?>
+    </a>
+
+    <a href="logout.php">
+        Logout
+    </a>
+
+<?php else: ?>
+
+    <a href="login.php">
+        Login
+    </a>
+
+    <a href="signup.php">
+        Sign Up
+    </a>
+
+<?php endif; ?>
+        </nav>
+            
+    
+    </header>
+
+
+    <main>
+
+        <section class="quiz-section">
+
+            <h2>Phishing Awareness Quiz</h2>
+
+            <p>
+                Test your cybersecurity knowledge!
+                Read each situation and decide whether it is
+                <strong>Phishing</strong> or <strong>Safe</strong>.
+            </p>
+
+
+            
+
+            <div class="quiz-card">
+
+                <h3>Question 1</h3>
+
+                <p class="message">
+                    ⚠️ URGENT! Your bank account will be
+                    suspended today. Click this link immediately
+                    to verify your account information.
+                </p>
+
+                <button onclick="checkAnswer(1, 'phishing')">
+                    🚨 Phishing
+                </button>
+
+                <button onclick="checkAnswer(1, 'safe')">
+                    ✅ Safe
+                </button>
+
+                <p id="result1"></p>
+
+            </div>
+
+
+           
+
+            <div class="quiz-card">
+
+                <h3>Question 2</h3>
+
+                <p class="message">
+                    📧 Your college sends you an email saying:
+                    "Your assignment submission has been received."
+                    The email contains no links and asks for no
+                    personal information.
+                </p>
+
+                <button onclick="checkAnswer(2, 'phishing')">
+                    🚨 Phishing
+                </button>
+
+                <button onclick="checkAnswer(2, 'safe')">
+                    ✅ Safe
+                </button>
+
+                <p id="result2"></p>
+
+            </div>
+
+
+            
+            <div class="quiz-card">
+
+                <h3>Question 3</h3>
+
+                <p class="message">
+                    🎁 Congratulations! You have won ₹50,000.
+                    Send your bank details and OTP to claim
+                    your prize immediately.
+                </p>
+
+                <button onclick="checkAnswer(3, 'phishing')">
+                    🚨 Phishing
+                </button>
+
+                <button onclick="checkAnswer(3, 'safe')">
+                    ✅ Safe
+                </button>
+
+                <p id="result3"></p>
+
+            </div>
+
+
+            <div class="score-card">
+
+                <h3>Your Score</h3>
+
+                <p id="score">
+                    Answer all questions to see your score.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="quiz.js"></script>
+
+</body>
+
+</html>

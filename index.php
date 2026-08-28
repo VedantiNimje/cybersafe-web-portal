@@ -1,0 +1,322 @@
+<?php
+session_start();
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyberSafe - Cybersecurity Awareness</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+   
+    <header>
+        <h1>CyberSafe</h1>
+
+        
+            <nav>
+    <a href="index.php">Home</a>
+    <a href="index.php#threats">Cyber Threats</a>
+    <a href="index.php#tips">Safety Tips</a>
+    <a href="index.php#password-checker">Password Checker</a>
+    <a href="phishing-quiz.html">Phishing Quiz</a>
+    <a href="about.html">About</a>
+    <?php if (isset($_SESSION["user_id"])): ?>
+
+    <div class="user-menu">
+
+        <button class="user-button" onclick="toggleUserMenu()">
+
+            <span class="user-avatar">
+
+    <?php if (!empty($_SESSION["profile_picture"])): ?>
+
+        <img
+            src="<?php echo htmlspecialchars($_SESSION["profile_picture"]); ?>"
+            alt="Profile Picture"
+        >
+
+    <?php else: ?>
+
+        <?php
+        echo strtoupper(
+            substr($_SESSION["user_name"], 0, 1)
+        );
+        ?>
+
+    <?php endif; ?>
+
+</span>
+
+            <span>
+                <?php
+                echo htmlspecialchars($_SESSION["user_name"]);
+                ?>
+            </span>
+
+            <span>▼</span>
+
+        </button>
+
+
+        <div class="user-dropdown" id="userDropdown">
+
+            <div class="user-info">
+
+                <strong>
+                    <?php
+                    echo htmlspecialchars($_SESSION["user_name"]);
+                    ?>
+                </strong>
+
+                <small>
+                    <?php
+                    echo htmlspecialchars($_SESSION["user_email"]);
+                    ?>
+                </small>
+
+            </div>
+
+
+            <hr>
+
+
+            <a href="profile.php">
+                👤 My Profile
+            </a>
+
+
+            <a href="quiz-results.php">
+                🎯 My Quiz Results
+            </a>
+
+
+            <a href="settings.php">
+                ⚙️ Account Settings
+            </a>
+
+
+            <hr>
+
+
+            <a href="logout.php" class="logout-link">
+                🚪 Logout
+            </a>
+
+        </div>
+
+    </div>
+
+
+<?php else: ?>
+
+    <a href="login.php">
+        Login
+    </a>
+
+    <a href="signup.php">
+        Sign Up
+    </a>
+
+<?php endif; ?>
+
+        </nav>
+    </header>
+
+    <hr>
+
+  
+    <main>
+
+        <section>
+            <h2>Stay Safe in the Digital World</h2>
+
+            <p>
+                Welcome to CyberSafe, a cybersecurity awareness platform
+                designed to help you understand common cyber threats and
+                learn how to protect yourself online.
+            </p>
+
+            <a href="threats.html">Explore Cyber Threats</a>
+            <br><br>
+            <a href="safety.html">Learn Safety Tips</a>
+        </section>
+
+        <hr>
+
+       
+        <section>
+            <h2>What is Cybersecurity?</h2>
+
+            <p>
+                Cybersecurity is the practice of protecting computers,
+                networks, applications and data from unauthorized access,
+                attacks, damage and other cyber threats.
+            </p>
+
+            <p>
+                Understanding basic cybersecurity can help people protect
+                their personal information and use digital services safely.
+            </p>
+        </section>
+
+        <hr>
+
+        
+        <section class="content-section"id="threats">
+    
+            <h2>Common Cyber Threats</h2>
+            <div class="threat-container">
+            <article class="threat-card">
+                </div>
+
+                <h3>Phishing</h3>
+                <p>
+                    Fake messages or websites designed to trick people into
+                    revealing sensitive information.
+                </p>
+            </article>
+
+            <article>
+                <h3>Malware</h3>
+                <p>
+                    Malicious software designed to disrupt systems,
+                    damage data or perform unauthorized actions.
+                </p>
+            </article>
+
+            <article>
+                <h3>Social Engineering</h3>
+                <p>
+                    Manipulating people into revealing information or
+                    performing actions that may compromise security.
+                </p>
+            </article>
+
+            <article>
+                <h3>Ransomware</h3>
+                <p>
+                    Malware that can prevent access to data and demand
+                    payment from victims.
+                </p>
+            </article>
+        </section>
+        
+        <section class="content-section"id="tips">
+    
+
+    <h2>Cyber Safety Tips</h2>
+
+    <div class="tips-container">
+
+        <div class="tip-card">
+            <h3>🔐 Use Strong Passwords</h3>
+            <p>
+                Use long and unique passwords for your accounts.
+                Avoid using easily guessable information.
+            </p>
+        </div>
+
+        <div class="tip-card">
+            <h3>🛡️ Enable Multi-Factor Authentication</h3>
+            <p>
+                Use an additional verification method whenever
+                possible to provide extra account security.
+            </p>
+        </div>
+
+        <div class="tip-card">
+            <h3>🎣 Be Careful with Phishing</h3>
+            <p>
+                Check links, email addresses and messages carefully
+                before clicking or sharing personal information.
+            </p>
+        </div>
+
+        <div class="tip-card">
+            <h3>🔄 Keep Software Updated</h3>
+            <p>
+                Install security updates for your operating system,
+                applications and browser regularly.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+
+        <hr>
+
+       
+        <section>
+            <h2>Why Does Cybersecurity Matter?</h2>
+
+            <ul>
+                <li>Protects personal information</li>
+                <li>Helps prevent unauthorized access</li>
+                <li>Protects important data</li>
+                <li>Improves online safety</li>
+                <li>Creates awareness about cyber threats</li>
+            </ul>
+        </section>
+
+        <hr>
+
+        
+        <section>
+            <h2>Start Learning</h2>
+
+            <p>
+                Explore CyberSafe to learn about cyber threats,
+                improve your security habits and test your knowledge.
+            </p>
+
+            <a href="threats.html">Learn About Threats</a>
+        </section>
+       
+        <section class="content-section" id="password-checker">
+
+    <h2>Password Strength Checker</h2>
+
+    <p>
+        Enter a password below to check its strength.
+        Your password is checked only in your browser.
+    </p>
+
+    <div class="password-box">
+
+        <input
+            type="password"
+            id="passwordInput"
+            placeholder="Enter a password"
+        >
+
+        <button onclick="checkPassword()">
+            Check Password
+        </button>
+
+        <p id="passwordResult"></p>
+
+    </div>
+
+</section>
+
+    </main>
+
+    <hr>
+
+    
+    <footer>
+        <p>&copy; 2026 CyberSafe. Educational Project.</p>
+    </footer>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
