@@ -98,3 +98,39 @@ CyberSafe/
 <img width="1903" height="897" alt="phishing quiz" src="https://github.com/user-attachments/assets/d357139c-dcec-4de9-9a1b-1817b957cef5" />
 
 - 👤 **User Dashboard & Profile**
+<img width="826" height="845" alt="signin" src="https://github.com/user-attachments/assets/d4a3064c-3e1a-4f28-9ae3-007f5c8d8c36" />
+<img width="1917" height="142" alt="Screenshot 2026-10-04 122233" src="https://github.com/user-attachments/assets/e9ff0f32-abd0-4908-a811-fed413a081da" />
+<img width="757" height="548" alt="Screenshot 2026-10-04 123240" src="https://github.com/user-attachments/assets/bac0cd50-8ad5-4588-a252-6da3a27e47db" />
+
+🎯 Project Objectives
+Create awareness about cybersecurity
+Help users understand common cyber threats
+Encourage safer online practices
+Provide an interactive way to learn about phishing
+Demonstrate basic web development and PHP functionality
+
+💡 Learning Outcomes
+Through this project, I learned about:
+Building a multi-page website using HTML and CSS
+Adding interactivity using JavaScript
+Creating PHP-based web pages
+Implementing basic user registration and login functionality
+Organizing a web development project using Git and GitHub
+Understanding basic cybersecurity awareness concepts
+
+🚀 Future Improvements
+Some possible future improvements include:
+Adding a database for storing user information securely
+Improving password security with password hashing
+Adding more cybersecurity quizzes
+Adding more cyber threat information
+Improving the website's responsive design
+Adding additional security features
+
+👩‍💻 Author
+Vedanti Nimje
+Cyber Security and Forensics Student
+
+📌 Project Type
+Academic / Learning Project
+This project was created to practice web development and develop awareness about basic cybersecurity concepts.
