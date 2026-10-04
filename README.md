@@ -1,4 +1,4 @@
-# 🛡️ CyberSafe – Cybersecurity Awareness Website
+# 🛡️ cybersafe-web-portal Website
 
 CyberSafe is a cybersecurity awareness website designed to help users learn about common cyber threats and practice safe online habits.
 
